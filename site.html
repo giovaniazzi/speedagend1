@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SPEEDAGEND – LOTE SUA AGENDA COM ESTÉTICA</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body { background: #000; color: #fff; font-family: 'Inter', sans-serif; }
+    .gradient-text {
+      background: linear-gradient(90deg,#FF7EB3 0%,#FF758C 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; color: transparent;
+    }
+    .btn-3d {
+      background: #FF7EB3; color: #fff; font-weight: 700;
+      padding: 1rem 2rem; border: none; border-radius: .5rem;
+      box-shadow: 0 8px 0 #C06C84; transition: transform .1s, box-shadow .1s;
+    }
+    .btn-3d:hover {
+      transform: translateY(4px); box-shadow: 0 4px 0 #C06C84;
+    }
+    .card-dark {
+      background: #18181B; color: #fff;
+      border-radius: 1rem; padding: 2rem;
+      box-shadow: 0 4px 24px rgba(255,87,136,.1);
+      border: 1px solid #2D2D2D; text-align: left;
+    }
+    .section-light {
+      background: #F7F7FA; color: #18181B;
+    }
+    .section-light .gradient-text {
+      background: linear-gradient(90deg,#FF7EB3 0%,#FF758C 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; color: transparent;
+    }
+    .section-light input,
+    .section-light textarea {
+      background: #F0F0F5; color: #18181B;
+      border: 2px solid #FF7EB3; border-radius: .5rem;
+      padding: .75rem 1rem; font-size: 1rem; margin-bottom: 1rem;
+      width: 100%; box-sizing: border-box;
+    }
+    .section-light input::placeholder,
+    .section-light textarea::placeholder {
+      color: #888;
+    }
+    .responsive-iframe-container {
+      position: relative; width: 100%; padding-top: 65%; min-height: 400px;
+      background: #222; border-radius: 1rem; overflow: hidden;
+      box-shadow: 0 8px 32px rgba(255,87,136,.1); border: 2px solid #FF7EB3;
+      margin: 3rem auto;
+    }
+    .responsive-iframe {
+      position: absolute; top:0; left:0; width:100%; height:100%; border:0; background:#222;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="py-24 px-8 bg-black text-center">
+    <h1 class="gradient-text uppercase text-5xl md:text-6xl font-extrabold mb-6">LOTE SUA AGENDA COM ESTÉTICA</h1>
+    <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+      GERAMOS AGENDAMENTOS REAIS PARA CLÍNICAS DE ESTÉTICA — BOTOX, LIMPEZA DE PELE E MUITO MAIS. SIMPLES, EFICAZ E COM TECNOLOGIA DE PONTA!
+    </p>
+    <a href="#contato" class="btn-3d">QUERO SABER COMO FUNCIONA</a>
+  </section>
+
+  <!-- IDEAL PARA VOCÊ -->
+  <section class="py-24 px-8 bg-black">
+    <h2 class="gradient-text uppercase text-4xl font-bold mb-12 text-center">IDEAL PARA VOCÊ QUE:</h2>
+    <div class="grid gap-12 md:grid-cols-3 max-w-5xl mx-auto">
+      <div class="card-dark">
+        <i class="fas fa-clinic-medical text-4xl text-pink-400 mb-4"></i>
+        <h3 class="uppercase font-semibold mb-3">CLÍNICA QUALIFICADA</h3>
+        <p>Tem clínica de estética e precisa lotar sua agenda com clientes qualificados.</p>
+      </div>
+      <div class="card-dark">
+        <i class="fas fa-bolt text-4xl text-pink-400 mb-4"></i>
+        <h3 class="uppercase font-semibold mb-3">RESULTADOS RÁPIDOS</h3>
+        <p>Quer resultados rápidos sem depender apenas de indicações.</p>
+      </div>
+      <div class="card-dark">
+        <i class="fas fa-calendar-check text-4xl text-pink-400 mb-4"></i>
+        <h3 class="uppercase font-semibold mb-3">AGENDAMENTO</h3>
+        <p>Deseja um sistema de agendamento automatizado e integrado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSSA HISTÓRIA -->
+  <section class="section-light py-24 px-8">
+    <h2 class="gradient-text uppercase text-4xl font-bold mb-6 text-center">NOSSA HISTÓRIA</h2>
+    <div class="max-w-3xl mx-auto space-y-6 text-left">
+      <p>A SPEEDAGEND NASCEU DA PAIXÃO POR CONECTAR CLÍNICAS DE ESTÉTICA A CLIENTES QUE BUSCAM TRANSFORMAÇÃO. COM ANOS DE EXPERIÊNCIA EM MARKETING DIGITAL E AUTOMAÇÃO, VIMOS O DESAFIO DE MANTER A AGENDA CHEIA.</p>
+      <p>UNIMOS TECNOLOGIA, CRIATIVIDADE E EXPERTISE DO SETOR PARA CRIAR ESTRATÉGIAS QUE FUNCIONAM, AUMENTANDO FATURAMENTO E VISIBILIDADE. HOJE SOMOS REFERÊNCIA EM CAPTAÇÃO AUTOMÁTICA DE CLIENTES.</p>
+    </div>
+  </section>
+
+  <!-- PROVA SOCIAL -->
+  <section class="py-24 px-8 bg-black text-center">
+    <h2 class="gradient-text uppercase text-4xl font-bold mb-6">+ DE 32 CLÍNICAS SATISFEITAS</h2>
+    <p class="text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+      JÁ IMPACTAMOS MAIS DE 100K PESSOAS EM CAMPANHAS ATIVAS E GERENCIAMOS MAIS DE R$1 MILHÃO EM MÍDIA PAGA!
+    </p>
+    <ul class="text-lg text-gray-400 space-y-3 mb-12 max-w-3xl mx-auto text-left">
+      <li>✔ 5 ETAPAS PARA MULTIPLICAR SEUS AGENDAMENTOS</li>
+      <li>✔ RESULTADOS EM POUCOS DIAS</li>
+      <li>✔ SEM DEPENDER DE INDICAÇÕES</li>
+    </ul>
+    <a href="#contato" class="btn-3d">QUERO SABER COMO FUNCIONA</a>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="section-light py-24 px-8">
+    <h2 class="gradient-text uppercase text-4xl font-bold mb-6 text-center">NOSSOS SERVIÇOS</h2>
+    <div class="grid gap-12 md:grid-cols-3 max-w-5xl mx-auto">
+      <div class="card-dark">
+        <i class="fas fa-bullhorn text-4xl text-pink-400 mb-4"></i>
+        <h4 class="font-semibold mb-3">ANÚNCIOS IRRESISTÍVEIS</h4>
+        <p>CRIAMOS CAMPANHAS COM COPY E CRIATIVOS QUE VENDEM.</p>
+      </div>
+      <div class="card-dark">
+        <i class="fas fa-user-check text-4xl text-pink-400 mb-4"></i>
+        <h4 class="font-semibold mb-3">LEADS QUALIFICADOS</h4>
+        <p>RECEBA CONTATOS QUENTES PRONTOS PARA AGENDAR.</p>
+      </div>
+      <div class="card-dark">
+        <i class="fas fa-calendar-alt text-4xl text-pink-400 mb-4"></i>
+        <h4 class="font-semibold mb-3">SISTEMA DE AGENDAMENTO</h4>
+        <p>FACILITAMOS A MARCAÇÃO COM TECNOLOGIA INTEGRADA.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section-light py-24 px-8 text-center">
+    <h2 class="gradient-text uppercase text-4xl font-bold mb-8">ENTRE EM CONTATO</h2>
+    <div class="responsive-iframe-container max-w-2xl mx-auto">
+      <iframe
+        src="https://tally.so/r/mVYj4a?transparentBackground=1&dynamicHeight=1"
+        title="Formulário SpeedAgend"
+        class="responsive-iframe"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 bg-black text-center">
+    <p class="text-gray-400">&copy; 2025 SPEEDAGEND – MÍDIA. TODOS OS DIREITOS RESERVADOS.</p>
+  </footer>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/SEUNUMEROAQUI"
+     class="fixed bottom-6 right-6 bg-pink-400 text-white p-4 rounded-lg shadow-lg hover:bg-pink-500 transition">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+
+</body>
+</html>
