@@ -3,161 +3,259 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SPEEDAGEND – LOTE SUA AGENDA COM ESTÉTICA</title>
+
+  <title>
+    Lote sua agenda de clientes
+  </title>
+
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    body { background: #000; color: #fff; font-family: 'Inter', sans-serif; }
+    body { margin:0; background:#000; color:#fff; font-family:'Inter',sans-serif; text-align:center }
+    h1,h2,h3,h4 { text-transform:uppercase; font-weight:800 }
     .gradient-text {
-      background: linear-gradient(90deg,#FF7EB3 0%,#FF758C 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text; color: transparent;
+      background:linear-gradient(90deg,#ff7eb3 0%,#ff758c 100%);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      background-clip:text; color:transparent;
     }
     .btn-3d {
-      background: #FF7EB3; color: #fff; font-weight: 700;
-      padding: 1rem 2rem; border: none; border-radius: .5rem;
-      box-shadow: 0 8px 0 #C06C84; transition: transform .1s, box-shadow .1s;
+      background:#ff7eb3; color:#fff; font-weight:700;
+      padding:1rem 2rem; border:none; border-radius:.5rem;
+      box-shadow:0 8px 0 #c06c84; transition:transform .1s,box-shadow .1s;
+      text-transform:uppercase;
     }
-    .btn-3d:hover {
-      transform: translateY(4px); box-shadow: 0 4px 0 #C06C84;
-    }
+    .btn-3d:hover { transform:translateY(4px); box-shadow:0 4px 0 #c06c84; }
     .card-dark {
-      background: #18181B; color: #fff;
-      border-radius: 1rem; padding: 2rem;
-      box-shadow: 0 4px 24px rgba(255,87,136,.1);
-      border: 1px solid #2D2D2D; text-align: left;
+      background:#18181b; color:#fff; border-radius:1rem;
+      padding:2rem; box-shadow:0 4px 24px rgba(255,87,136,.1);
+      border:1px solid #2d2d2d; text-align:center;
     }
-    .section-light {
-      background: #F7F7FA; color: #18181B;
+    p,ul li { font-weight:600; line-height:1.6 }
+    .section-white {
+      background:#fff; color:#18181b; padding:6rem 2rem; text-align:center;
     }
-    .section-light .gradient-text {
-      background: linear-gradient(90deg,#FF7EB3 0%,#FF758C 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text; color: transparent;
+    .section-white p { font-weight:600; line-height:1.6 }
+    .stats-section {
+      background:#fff; color:#18181b; padding:6rem 2rem; text-align:center;
     }
-    .section-light input,
-    .section-light textarea {
-      background: #F0F0F5; color: #18181B;
-      border: 2px solid #FF7EB3; border-radius: .5rem;
-      padding: .75rem 1rem; font-size: 1rem; margin-bottom: 1rem;
-      width: 100%; box-sizing: border-box;
+    .stats-title {
+      font-size:2.5rem; font-weight:800; margin-bottom:2.5rem;
+      background:linear-gradient(90deg,#ff7eb3,#ff758c);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent; color:transparent;
     }
-    .section-light input::placeholder,
-    .section-light textarea::placeholder {
-      color: #888;
+    .stats-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:2rem; max-width:1000px; margin:0 auto; padding:0 1rem;
     }
+    .stat-card {
+      background:#18181b; color:#fff; border-radius:1rem;
+      padding:2.5rem 1.5rem; box-shadow:0 6px 28px rgba(255,87,136,.12);
+      border:1.5px solid #2d2d2d; text-align:center;
+    }
+    .stat-label { color:#ff7eb3; font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:.5rem; }
+    .stat-number {
+      font-size:2.8rem; font-weight:900;
+      background:linear-gradient(90deg,#ff7eb3,#feb47b);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      margin-bottom:.5rem; color:transparent;
+    }
+    .stat-desc { font-size:1.15rem; font-weight:600; line-height:1.3 }
+    .testimonials-section {
+      background:#18181b; color:#fff; padding:5rem 2rem; text-align:center;
+    }
+    .testimonials-title {
+      font-size:2.2rem; font-weight:800; margin-bottom:2.5rem;
+      background:linear-gradient(90deg,#ff7eb3,#ff758c);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent; color:transparent;
+    }
+    .testimonials-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:2rem; max-width:950px; margin:0 auto;
+    }
+    .testimonial-card {
+      background:#000; color:#fff; border-radius:1rem;
+      padding:2rem 1.5rem; box-shadow:0 6px 28px rgba(255,87,136,.12);
+      border:1px solid #ff7eb3; display:flex;flex-direction:column;
+      align-items:center; text-align:center;
+    }
+    .testimonial-avatar {
+      width:64px; height:64px; border-radius:50%;
+      object-fit:cover; margin:0 auto 1rem; border:3px solid #ff7eb3;
+      display:block;
+    }
+    .testimonial-name { font-weight:700; color:#ff7eb3; margin-bottom:.5rem; }
+    .testimonial-role { font-size:.95rem; color:#ffb3d2; margin-bottom:1rem; }
+    .testimonial-text { font-size:1.1rem; font-weight:500; line-height:1.4 }
     .responsive-iframe-container {
-      position: relative; width: 100%; padding-top: 65%; min-height: 400px;
-      background: #222; border-radius: 1rem; overflow: hidden;
-      box-shadow: 0 8px 32px rgba(255,87,136,.1); border: 2px solid #FF7EB3;
-      margin: 3rem auto;
+      position:relative; width:100%; padding-top:65%; min-height:400px;
+      background:#111; border-radius:1rem; overflow:hidden;
+      box-shadow:0 8px 32px rgba(255,87,136,.1); border:2px solid #ff7eb3;
+      margin:3rem auto;
     }
     .responsive-iframe {
-      position: absolute; top:0; left:0; width:100%; height:100%; border:0; background:#222;
+      position:absolute; top:0; left:0; width:100%; height:100%; border:0;
     }
+    .whatsapp-btn-big {
+      position:fixed; bottom:32px; right:32px; z-index:999;
+      background:linear-gradient(135deg,#25d366 0%,#128c7e 100%);
+      color:#fff; padding:1.2rem 2.2rem; border-radius:1rem;
+      box-shadow:0 8px 0 #0f5d44; display:inline-flex;
+      align-items:center; gap:.75rem; font-size:1.25rem;
+      text-transform:uppercase; transition:transform .12s,box-shadow .12s;
+    }
+    .whatsapp-btn-big:hover {
+      transform:translateY(4px); box-shadow:0 4px 0 #0f5d44;
+      background:linear-gradient(135deg,#128c7e 0%,#25d366 100%);
+    }
+    .hero {
+      min-height:100vh; position:relative;
+      display:flex; align-items:center; justify-content:center;
+      padding:2rem; overflow:hidden;
+      background-image:url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background-size:cover; background-position:center;
+    }
+    .hero-bg-blur {
+      position:absolute; inset:0; z-index:0;
+      background:url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+      filter:blur(7px) brightness(0.7);
+    }
+    .hero::before {
+      content:""; position:absolute; inset:0;
+      background:rgba(0,0,0,0.58); z-index:1;
+    }
+    .hero-content {
+      position:relative; z-index:2; width:100%;
+    }
+    @media (max-width:900px) { .hero{min-height:70vh} }
   </style>
 </head>
 <body>
 
   <!-- HERO -->
-  <section class="py-24 px-8 bg-black text-center">
-    <h1 class="gradient-text uppercase text-5xl md:text-6xl font-extrabold mb-6">LOTE SUA AGENDA COM ESTÉTICA</h1>
-    <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-      GERAMOS AGENDAMENTOS REAIS PARA CLÍNICAS DE ESTÉTICA — BOTOX, LIMPEZA DE PELE E MUITO MAIS. SIMPLES, EFICAZ E COM TECNOLOGIA DE PONTA!
-    </p>
-    <a href="#contato" class="btn-3d">QUERO SABER COMO FUNCIONA</a>
+  <section class="hero">
+    <div class="hero-bg-blur"></div>
+    <div class="hero-content text-center">
+      <h1 class="gradient-text text-5xl md:text-6xl mb-4">lote a sua agenda de clientes</h1>
+      <p class="text-xl text-white font-semibold mb-8 max-w-2xl mx-auto">
+        Geramos agendamentos reais para clínicas de estética : botox, limpeza de pele e muito mais!
+      </p>
+      <a href="#contato" class="btn-3d">quero saber como funciona</a>
+    </div>
   </section>
 
   <!-- IDEAL PARA VOCÊ -->
   <section class="py-24 px-8 bg-black">
-    <h2 class="gradient-text uppercase text-4xl font-bold mb-12 text-center">IDEAL PARA VOCÊ QUE:</h2>
+    <h2 class="gradient-text text-4xl mb-12">ideal para você que:</h2>
     <div class="grid gap-12 md:grid-cols-3 max-w-5xl mx-auto">
       <div class="card-dark">
         <i class="fas fa-clinic-medical text-4xl text-pink-400 mb-4"></i>
-        <h3 class="uppercase font-semibold mb-3">CLÍNICA QUALIFICADA</h3>
+        <h3 class="mb-3">clínica viva pele</h3>
         <p>Tem clínica de estética e precisa lotar sua agenda com clientes qualificados.</p>
       </div>
       <div class="card-dark">
         <i class="fas fa-bolt text-4xl text-pink-400 mb-4"></i>
-        <h3 class="uppercase font-semibold mb-3">RESULTADOS RÁPIDOS</h3>
+        <h3 class="mb-3">beleza & arte</h3>
         <p>Quer resultados rápidos sem depender apenas de indicações.</p>
       </div>
       <div class="card-dark">
         <i class="fas fa-calendar-check text-4xl text-pink-400 mb-4"></i>
-        <h3 class="uppercase font-semibold mb-3">AGENDAMENTO</h3>
+        <h3 class="mb-3">dermashine</h3>
         <p>Deseja um sistema de agendamento automatizado e integrado.</p>
       </div>
     </div>
   </section>
 
   <!-- NOSSA HISTÓRIA -->
-  <section class="section-light py-24 px-8">
-    <h2 class="gradient-text uppercase text-4xl font-bold mb-6 text-center">NOSSA HISTÓRIA</h2>
-    <div class="max-w-3xl mx-auto space-y-6 text-left">
-      <p>A SPEEDAGEND NASCEU DA PAIXÃO POR CONECTAR CLÍNICAS DE ESTÉTICA A CLIENTES QUE BUSCAM TRANSFORMAÇÃO. COM ANOS DE EXPERIÊNCIA EM MARKETING DIGITAL E AUTOMAÇÃO, VIMOS O DESAFIO DE MANTER A AGENDA CHEIA.</p>
-      <p>UNIMOS TECNOLOGIA, CRIATIVIDADE E EXPERTISE DO SETOR PARA CRIAR ESTRATÉGIAS QUE FUNCIONAM, AUMENTANDO FATURAMENTO E VISIBILIDADE. HOJE SOMOS REFERÊNCIA EM CAPTAÇÃO AUTOMÁTICA DE CLIENTES.</p>
+  <section class="section-white">
+    <h2 class="gradient-text text-4xl mb-6">nossa história</h2>
+    <div class="max-w-3xl mx-auto space-y-6">
+      <p>A SpeedAgend nasceu da paixão por conectar clínicas de estética a clientes que buscam transformação. Com anos de experiência em marketing digital e automação, vimos o desafio de manter a agenda cheia.</p>
+      <p>Unimos tecnologia, criatividade e expertise do setor para criar estratégias que funcionam, aumentando faturamento e visibilidade. Hoje somos referência em captação automática de clientes.</p>
     </div>
   </section>
 
   <!-- PROVA SOCIAL -->
-  <section class="py-24 px-8 bg-black text-center">
-    <h2 class="gradient-text uppercase text-4xl font-bold mb-6">+ DE 32 CLÍNICAS SATISFEITAS</h2>
-    <p class="text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
-      JÁ IMPACTAMOS MAIS DE 100K PESSOAS EM CAMPANHAS ATIVAS E GERENCIAMOS MAIS DE R$1 MILHÃO EM MÍDIA PAGA!
+  <section class="py-24 px-8 bg-black">
+    <h2 class="gradient-text text-4xl mb-6">+ de 32 clínicas satisfeitas</h2>
+    <p class="text-2xl text-white font-bold mb-12 max-w-3xl mx-auto" style="text-transform:uppercase;">
+      já impactamos mais de <span class="gradient-text">100k</span> pessoas em campanhas ativas e gerenciamos mais de <span class="gradient-text">r$1 milhão</span> em mídia paga!
     </p>
-    <ul class="text-lg text-gray-400 space-y-3 mb-12 max-w-3xl mx-auto text-left">
-      <li>✔ 5 ETAPAS PARA MULTIPLICAR SEUS AGENDAMENTOS</li>
-      <li>✔ RESULTADOS EM POUCOS DIAS</li>
-      <li>✔ SEM DEPENDER DE INDICAÇÕES</li>
+    <ul class="text-lg text-pink-100 font-bold space-y-3 max-w-3xl mx-auto">
+      <li>✔ 5 etapas para multiplicar seus agendamentos</li>
+      <li>✔ resultados em poucos dias</li>
+      <li>✔ sem depender de indicações</li>
     </ul>
-    <a href="#contato" class="btn-3d">QUERO SABER COMO FUNCIONA</a>
+    <a href="#contato" class="btn-3d mt-8 inline-block">quero saber como funciona</a>
   </section>
 
-  <!-- SERVIÇOS -->
-  <section id="servicos" class="section-light py-24 px-8">
-    <h2 class="gradient-text uppercase text-4xl font-bold mb-6 text-center">NOSSOS SERVIÇOS</h2>
-    <div class="grid gap-12 md:grid-cols-3 max-w-5xl mx-auto">
-      <div class="card-dark">
-        <i class="fas fa-bullhorn text-4xl text-pink-400 mb-4"></i>
-        <h4 class="font-semibold mb-3">ANÚNCIOS IRRESISTÍVEIS</h4>
-        <p>CRIAMOS CAMPANHAS COM COPY E CRIATIVOS QUE VENDEM.</p>
+  <!-- DEPOIMENTOS -->
+  <section class="testimonials-section">
+    <h2 class="testimonials-title">depoimentos de clientes</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Juliana" class="testimonial-avatar"/>
+        <div class="testimonial-name">Juliana Souza</div>
+        <div class="testimonial-role">Clínica Viva Pele</div>
+        <div class="testimonial-text">“Depois que comecei com a SpeedAgend, minha agenda ficou cheia e os clientes são realmente interessados!”</div>
       </div>
-      <div class="card-dark">
-        <i class="fas fa-user-check text-4xl text-pink-400 mb-4"></i>
-        <h4 class="font-semibold mb-3">LEADS QUALIFICADOS</h4>
-        <p>RECEBA CONTATOS QUENTES PRONTOS PARA AGENDAR.</p>
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos" class="testimonial-avatar"/>
+        <div class="testimonial-name">Carlos Mendes</div>
+        <div class="testimonial-role">Beleza & Arte</div>
+        <div class="testimonial-text">“Os resultados apareceram em poucos dias! Atendimento excelente e tecnologia que funciona.”</div>
       </div>
-      <div class="card-dark">
-        <i class="fas fa-calendar-alt text-4xl text-pink-400 mb-4"></i>
-        <h4 class="font-semibold mb-3">SISTEMA DE AGENDAMENTO</h4>
-        <p>FACILITAMOS A MARCAÇÃO COM TECNOLOGIA INTEGRADA.</p>
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Patrícia" class="testimonial-avatar"/>
+        <div class="testimonial-name">Patrícia Lima</div>
+        <div class="testimonial-role">Dermashine</div>
+        <div class="testimonial-text">“Nunca foi tão fácil captar clientes qualificados. Hoje tenho previsibilidade para focar no atendimento.”</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTATÍSTICAS -->
+  <section class="stats-section">
+    <h2 class="stats-title">nossas estatísticas</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">+ de</div>
+        <div class="stat-number">32</div>
+        <div class="stat-desc">clientes ativos</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">+ de</div>
+        <div class="stat-number">100K</div>
+        <div class="stat-desc">ativos mensalmente nas campanhas</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">+ de</div>
+        <div class="stat-number">1 milhão</div>
+        <div class="stat-desc">gerenciado em anúncios</div>
       </div>
     </div>
   </section>
 
   <!-- CONTATO -->
-  <section id="contato" class="section-light py-24 px-8 text-center">
-    <h2 class="gradient-text uppercase text-4xl font-bold mb-8">ENTRE EM CONTATO</h2>
+  <section id="contato" class="py-24">
+    <h2 class="gradient-text text-4xl mb-8">entre em contato</h2>
     <div class="responsive-iframe-container max-w-2xl mx-auto">
-      <iframe
-        src="https://tally.so/r/mVYj4a?transparentBackground=1&dynamicHeight=1"
-        title="Formulário SpeedAgend"
-        class="responsive-iframe"
+      <iframe 
+        src="https://tally.so/r/mVYj4a?transparentBackground=1&dynamicHeight=1" 
+        title="Formulário SpeedAgend" 
+        class="responsive-iframe" 
         allowfullscreen>
       </iframe>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-12 bg-black text-center">
+  <footer class="py-12 bg-black">
     <p class="text-gray-400">&copy; 2025 SPEEDAGEND – MÍDIA. TODOS OS DIREITOS RESERVADOS.</p>
   </footer>
 
   <!-- WHATSAPP -->
-  <a href="https://wa.me/SEUNUMEROAQUI"
-     class="fixed bottom-6 right-6 bg-pink-400 text-white p-4 rounded-lg shadow-lg hover:bg-pink-500 transition">
-    <i class="fab fa-whatsapp text-2xl"></i>
+  <a href="https://w.app/speedagend" class="whatsapp-btn-big" title="Fale conosco no WhatsApp" target="_blank" rel="noopener">
+    <i class="fas fa-phone-alt"></i><span>whatsapp</span>
   </a>
-
 </body>
 </html>
